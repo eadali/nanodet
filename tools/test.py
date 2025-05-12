@@ -74,7 +74,15 @@ def main(args):
     logger.info("Creating model...")
     task = TrainingTask(cfg, evaluator)
 
-    ckpt = torch.load(args.model)
+    # TODO: map_location is added to support loading model on CPU
+    # when GPU is not available. Remove it when we have a better solution.
+    # TODO: weights_only is added to support loading old model
+    # checkpoint. Remove it when we have a better solution.
+    ckpt = torch.load(
+        args.model,
+        map_location=torch.device('cpu'),
+        weights_only=False
+    )
     if "pytorch-lightning_version" not in ckpt:
         warnings.warn(
             "Warning! Old .pth checkpoint is deprecated. "
