@@ -5,15 +5,15 @@ numpy
 omegaconf>=2.0.1
 # onnx
 # onnx-simplifier
-opencv-python
+# opencv-python
 pyaml
 pycocotools
-pytorch-lightning>=1.9.0,<2.0.0
+# pytorch-lightning>=1.9.0,<2.0.0
 tabulate
 tensorboard
 termcolor
 # torch>=1.10,<2.0
-torch>=1.10
+# torch>=1.10
 torchmetrics
-torchvision
+# torchvision
 tqdm
