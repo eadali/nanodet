@@ -13,7 +13,6 @@ tabulate
 tensorboard
 termcolor
 # torch>=1.10,<2.0
-# torch>=1.10
 torchmetrics
 # torchvision
 tqdm
